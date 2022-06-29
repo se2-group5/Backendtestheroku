@@ -1,2 +1,4 @@
-release: python manage.py migrate
-web: gunicorn DIG_app.wsgi --log-file=-
+release: python manage.py makemigrations --no-input
+release: python manage.py migrate --no-input
+
+web: gunicorn DIG_app.wsgi
