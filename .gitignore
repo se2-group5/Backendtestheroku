@@ -4,6 +4,8 @@ images/
 *.pdf
 *.png
 
+__pycache__/
+
 # Distribution / packaging
 bin/
 build/
