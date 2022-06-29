@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-$t&@qd88w5pm*26hl0wcx69&+(@zcs#qfi#1sx*dp$sn1&z@65
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ddah.herokuapp.com']
 
 # Setting for Tinymce4
 # TINYMCE_DEFAULT_CONFIG = {
@@ -116,10 +118,10 @@ WSGI_APPLICATION = 'DIG_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'DIG_data', 
-        'USER': 'postgres', 
+        'NAME': 'dbjqfh34nd140h', 
+        'USER': 'qiuiigqvazfuac', 
         'PASSWORD': '12345678',
-        'HOST': '127.0.0.1', 
+        'HOST': 'ec2-44-205-41-76.compute-1.amazonaws.com', 
         'PORT': '5432',
     }
 }
@@ -159,7 +161,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = "/static/"
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
