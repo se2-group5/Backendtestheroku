@@ -1,34 +1,3 @@
-/venv
-images/
-*.jpeg
-*.pdf
-*.png
-
-__pycache__/
-
-# Distribution / packaging
-bin/
-build/
-develop-eggs/
-dist/
-eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Django stuff:
-*.log
-*.pot
-
-../.DS_Store
-.DS_Store
-
-#Things necesary to ignore in 
 # Created by https://www.toptal.com/developers/gitignore/api/django
 # Edit at https://www.toptal.com/developers/gitignore?templates=django
 
@@ -170,7 +139,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-.env.bat/
 
 # Spyder project settings
 .spyderproject
